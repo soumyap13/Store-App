@@ -10,10 +10,11 @@ class MessagesWidget extends StatefulWidget {
 }
 
 class _MessagesWidgetState extends State<MessagesWidget> {
+  var topNavigator1 = true, topNavigator2 = false, topNavigator3 = false;
   model.ConversationsList _conversationList;
   @override
   void initState() {
-    this._conversationList = new model.ConversationsList();
+    this._conversationList = new model.GroupConversationsList();
     super.initState();
   }
 
@@ -24,6 +25,61 @@ class _MessagesWidgetState extends State<MessagesWidget> {
       padding: EdgeInsets.symmetric(vertical: 7),
       child: Column(
         children: <Widget>[
+          Container(
+            color: Theme.of(context).primaryColor,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: FlatButton(
+                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                    onPressed: () {
+                      setState(() {
+                        _conversationList = new model.GroupConversationsList();
+                        topNavigator1 = true;
+                        topNavigator2 = false;
+                        topNavigator3 = false;
+                      });
+                    },
+                    child: topNavigator1
+                        ? topNavigator("Group", Theme.of(context).hintColor)
+                        : topNavigator("Group", null),
+                  ),
+                ),
+                Expanded(
+                  child: FlatButton(
+                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                    onPressed: () {
+                      setState(() {
+                        _conversationList = new model.ConversationsList();
+                        topNavigator1 = false;
+                        topNavigator2 = true;
+                        topNavigator3 = false;
+                      });
+                    },
+                    child: topNavigator2
+                        ? topNavigator("Chats", Theme.of(context).hintColor)
+                        : topNavigator("Chats", null),
+                  ),
+                ),
+                Expanded(
+                  child: FlatButton(
+                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                    onPressed: () {
+                      setState(() {
+                        _conversationList = new model.ConversationsList();
+                        topNavigator1 = false;
+                        topNavigator2 = false;
+                        topNavigator3 = true;
+                      });
+                    },
+                    child: topNavigator3
+                        ? topNavigator("Contacts", Theme.of(context).hintColor)
+                        : topNavigator("Contacts", null),
+                  ),
+                ),
+              ],
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SearchBarWidget(),
@@ -56,6 +112,22 @@ class _MessagesWidgetState extends State<MessagesWidget> {
           )
         ],
       ),
+    );
+  }
+
+  Widget topNavigator(String text, Color color) {
+    return Column(
+      children: <Widget>[
+        Text(
+          text,
+          style: Theme.of(context).textTheme.title,
+        ),
+        Container(
+          margin: EdgeInsets.all(5.0),
+          height: 3.0,
+          color: color,
+        ),
+      ],
     );
   }
 }
