@@ -45,14 +45,17 @@ class _SignInWidgetState extends State<SignInWidget> {
                     children: <Widget>[
                       SizedBox(height: 25),
                       Text('Sign In',
-                          style: Theme.of(context).textTheme.display3),
+                          style: Theme.of(context).textTheme.headline2),
                       SizedBox(height: 20),
                       new TextField(
                         style: TextStyle(color: Theme.of(context).accentColor),
-                        keyboardType: TextInputType.emailAddress,
+                        keyboardType: TextInputType.number,
                         decoration: new InputDecoration(
-                          hintText: 'Email Address',
-                          hintStyle: Theme.of(context).textTheme.body1.merge(
+                          hintText: 'Mobile Number',
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .bodyText2
+                              .merge(
                                 TextStyle(color: Theme.of(context).accentColor),
                               ),
                           enabledBorder: UnderlineInputBorder(
@@ -64,7 +67,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                               borderSide: BorderSide(
                                   color: Theme.of(context).accentColor)),
                           prefixIcon: Icon(
-                            UiIcons.envelope,
+                            UiIcons.smartphone,
                             color: Theme.of(context).accentColor,
                           ),
                         ),
@@ -76,7 +79,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                         obscureText: !_showPassword,
                         decoration: new InputDecoration(
                           hintText: 'Password',
-                          hintStyle: Theme.of(context).textTheme.body1.merge(
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .bodyText2
+                              .merge(
                                 TextStyle(color: Theme.of(context).accentColor),
                               ),
                           enabledBorder: UnderlineInputBorder(
@@ -133,12 +139,12 @@ class _SignInWidgetState extends State<SignInWidget> {
                         shape: StadiumBorder(),
                       ),
                       SizedBox(height: 50),
-                      Text(
-                        'Or using social media',
-                        style: Theme.of(context).textTheme.body1,
-                      ),
-                      SizedBox(height: 20),
-                      new SocialMediaWidget()
+                      // Text(
+                      //   'Or using social media',
+                      //   style: Theme.of(context).textTheme.body1,
+                      // ),
+                      // SizedBox(height: 20),
+                      // new SocialMediaWidget()
                     ],
                   ),
                 ),
