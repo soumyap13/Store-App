@@ -133,7 +133,7 @@ class _CartWidgetState extends State<CartWidget> {
                             style: Theme.of(context).textTheme.body2,
                           ),
                         ),
-                        Text('\$50.23',
+                        Text('\₹50.23',
                             style: Theme.of(context).textTheme.subhead),
                       ],
                     ),
@@ -146,7 +146,7 @@ class _CartWidgetState extends State<CartWidget> {
                             style: Theme.of(context).textTheme.body2,
                           ),
                         ),
-                        Text('\$13.23',
+                        Text('\₹13.23',
                             style: Theme.of(context).textTheme.subhead),
                       ],
                     ),
@@ -175,7 +175,7 @@ class _CartWidgetState extends State<CartWidget> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Text(
-                            '\$55.36',
+                            '\₹55.36',
                             style: Theme.of(context).textTheme.display1.merge(
                                 TextStyle(
                                     color: Theme.of(context).primaryColor)),
