@@ -10,7 +10,10 @@ class MessagesWidget extends StatefulWidget {
 }
 
 class _MessagesWidgetState extends State<MessagesWidget> {
-  var topNavigator1 = true, topNavigator2 = false, topNavigator3 = false;
+  var topNavigator1 = true,
+      topNavigator2 = false,
+      topNavigator3 = false,
+      topNavigator4 = false;
   model.ConversationsList _conversationList;
   @override
   void initState() {
@@ -38,6 +41,7 @@ class _MessagesWidgetState extends State<MessagesWidget> {
                         topNavigator1 = true;
                         topNavigator2 = false;
                         topNavigator3 = false;
+                        topNavigator4 = false;
                       });
                     },
                     child: topNavigator1
@@ -54,6 +58,7 @@ class _MessagesWidgetState extends State<MessagesWidget> {
                         topNavigator1 = false;
                         topNavigator2 = true;
                         topNavigator3 = false;
+                        topNavigator4 = false;
                       });
                     },
                     child: topNavigator2
@@ -70,11 +75,30 @@ class _MessagesWidgetState extends State<MessagesWidget> {
                         topNavigator1 = false;
                         topNavigator2 = false;
                         topNavigator3 = true;
+                        topNavigator4 = false;
                       });
                     },
                     child: topNavigator3
                         ? topNavigator("Contacts", Theme.of(context).hintColor)
                         : topNavigator("Contacts", null),
+                  ),
+                ),
+                Expanded(
+                  child: FlatButton(
+                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                    onPressed: () {
+                      setState(() {
+                        _conversationList =
+                            new model.PeopleNearbyConversationsList();
+                        topNavigator1 = false;
+                        topNavigator2 = false;
+                        topNavigator3 = false;
+                        topNavigator4 = true;
+                      });
+                    },
+                    child: topNavigator4
+                        ? topNavigator("Nearby", Theme.of(context).hintColor)
+                        : topNavigator("Nearby", null),
                   ),
                 ),
               ],
