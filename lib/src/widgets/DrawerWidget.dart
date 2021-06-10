@@ -20,7 +20,7 @@ class DrawerWidget extends StatelessWidget {
 //              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
               ),
               accountName: Text(
-                _user.name,
+                _user.firstName + " " + _user.lastName,
                 style: Theme.of(context).textTheme.title,
               ),
               accountEmail: Text(
@@ -92,6 +92,32 @@ class DrawerWidget extends StatelessWidget {
             ),
             title: Text(
               "Wish List",
+              style: Theme.of(context).textTheme.subhead,
+            ),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.of(context).pushNamed('/Tabs', arguments: 4);
+            },
+            leading: Icon(
+              UiIcons.wallet,
+              color: Theme.of(context).focusColor.withOpacity(1),
+            ),
+            title: Text(
+              "Wallet",
+              style: Theme.of(context).textTheme.subhead,
+            ),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.of(context).pushNamed('/Tabs', arguments: 4);
+            },
+            leading: Icon(
+              UiIcons.tag,
+              color: Theme.of(context).focusColor.withOpacity(1),
+            ),
+            title: Text(
+              "Offers",
               style: Theme.of(context).textTheme.subhead,
             ),
           ),

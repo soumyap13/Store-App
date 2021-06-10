@@ -10,6 +10,7 @@ import 'src/screens/help.dart';
 import 'src/screens/languages.dart';
 import 'src/screens/on_boarding.dart';
 import 'src/screens/orders.dart';
+import 'src/screens/grouporders.dart';
 import 'src/screens/product.dart';
 import 'src/screens/signin.dart';
 import 'src/screens/signup.dart';
@@ -34,6 +35,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => OrdersWidget());
       case '/Brands':
         return MaterialPageRoute(builder: (_) => BrandsWidget());
+      case '/GroupOrders':
+        return MaterialPageRoute(builder: (_) => GroupOrdersWidget());
 //      case '/MobileVerification':
 //        return MaterialPageRoute(builder: (_) => MobileVerification());
 //      case '/MobileVerification2':
