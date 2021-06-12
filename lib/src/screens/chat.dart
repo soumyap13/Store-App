@@ -1,5 +1,8 @@
 import 'dart:async';
 
+import 'package:store_app/src/screens/cart.dart';
+import 'package:store_app/src/screens/group_wish_list.dart';
+
 import '../../config/ui_icons.dart';
 import '../models/chat.dart';
 import '../models/conversation.dart';
@@ -37,10 +40,10 @@ class _ChatWidgetState extends State<ChatWidget> {
         automaticallyImplyLeading: false,
         leadingWidth: 25.0,
         leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.arrow_back)),
+          icon:
+              new Icon(UiIcons.return_icon, color: Theme.of(context).hintColor),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         actions: [
           appBarActions(),
         ],
@@ -174,7 +177,7 @@ class _ChatWidgetState extends State<ChatWidget> {
         ),
         const PopupMenuItem<ChatBoxMenu>(
           value: ChatBoxMenu.GoToFirstMessage,
-          child: Text('Go To FirstMessage'),
+          child: Text('Go To First Message'),
         ),
         const PopupMenuItem<ChatBoxMenu>(
           value: ChatBoxMenu.Report,
@@ -196,7 +199,10 @@ class _ChatWidgetState extends State<ChatWidget> {
           Expanded(
             flex: 1,
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => GroupWishList()));
+              },
               icon: new Icon(
                 UiIcons.heart,
                 color: Theme.of(context).accentColor,
@@ -206,7 +212,10 @@ class _ChatWidgetState extends State<ChatWidget> {
           Expanded(
             flex: 2,
             child: new FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => CartWidget()));
+              },
               child: Stack(
                 alignment: AlignmentDirectional.topEnd,
                 children: <Widget>[

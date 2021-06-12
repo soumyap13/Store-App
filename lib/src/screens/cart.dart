@@ -40,9 +40,7 @@ class _CartWidgetState extends State<CartWidget> {
               margin: EdgeInsets.only(top: 12.5, bottom: 12.5, right: 20),
               child: InkWell(
                 borderRadius: BorderRadius.circular(300),
-                onTap: () {
-                  Navigator.of(context).pushNamed('/Tabs', arguments: 1);
-                },
+                onTap: () {},
                 child: CircleAvatar(
                   backgroundImage: AssetImage('img/user2.jpg'),
                 ),
