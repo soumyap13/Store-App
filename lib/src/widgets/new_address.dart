@@ -60,48 +60,50 @@ class _NewAddressState extends State<NewAddress> {
       elevation: 5,
       child: Container(
         padding: EdgeInsets.all(10),
-        child: Column(
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(labelText: 'Full Name'),
-              controller: fullnameController,
-              onSubmitted: (_) => submitaddress(),
-              // onChanged: (val) {
-              //  fullnameInput = val;
-              //},
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'Mobile Number'),
-              controller: mnumberController,
-              onSubmitted: (_) => submitaddress(),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'Street Address'),
-              controller: streetaddressController,
-              keyboardType: TextInputType.phone,
-              onSubmitted: (_) => submitaddress(),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'City'),
-              controller: cityController,
-              onSubmitted: (_) => submitaddress(),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'State'),
-              controller: stateController,
-              onSubmitted: (_) => submitaddress(),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: 'Pincode'),
-              controller: pincodeController,
-              keyboardType: TextInputType.number,
-              onSubmitted: (_) => submitaddress(),
-            ),
-            FlatButton(
-              onPressed: submitaddress,
-              child: Text('Save Address'),
-            )
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              TextField(
+                decoration: InputDecoration(labelText: 'Full Name'),
+                controller: fullnameController,
+                onSubmitted: (_) => submitaddress(),
+                // onChanged: (val) {
+                //  fullnameInput = val;
+                //},
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'Mobile Number'),
+                controller: mnumberController,
+                onSubmitted: (_) => submitaddress(),
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'Street Address'),
+                controller: streetaddressController,
+                keyboardType: TextInputType.phone,
+                onSubmitted: (_) => submitaddress(),
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'City'),
+                controller: cityController,
+                onSubmitted: (_) => submitaddress(),
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'State'),
+                controller: stateController,
+                onSubmitted: (_) => submitaddress(),
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'Pincode'),
+                controller: pincodeController,
+                keyboardType: TextInputType.number,
+                onSubmitted: (_) => submitaddress(),
+              ),
+              FlatButton(
+                onPressed: submitaddress,
+                child: Text('Save Address'),
+              )
+            ],
+          ),
         ),
       ),
     );
