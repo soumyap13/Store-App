@@ -107,7 +107,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-              Navigator.of(context).pushNamed('/Tabs', arguments: 4);
+              Navigator.of(context).pushNamed('/Tabs', arguments: 1);
             },
             leading: Icon(
               UiIcons.heart,
@@ -227,7 +227,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-              Navigator.of(context).pushNamed('/Tabs', arguments: 1);
+              Navigator.of(context).pushNamed('/Tabs', arguments: 4);
             },
             leading: Icon(
               UiIcons.settings_1,

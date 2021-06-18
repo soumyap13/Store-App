@@ -109,7 +109,7 @@ class _TabsWidgetState extends State<TabsWidget> {
               child: InkWell(
                 borderRadius: BorderRadius.circular(300),
                 onTap: () {
-                  Navigator.of(context).pushNamed('/Tabs', arguments: 1);
+                  Navigator.of(context).pushNamed('/Tabs', arguments: 4);
                 },
                 child: CircleAvatar(
                   backgroundImage: AssetImage('img/user2.jpg'),
