@@ -36,7 +36,7 @@ class _OrdersWidgetState extends State<OrdersWidget> {
             backgroundColor: Colors.transparent,
             elevation: 0,
             title: Text(
-              'My Orders',
+              'Order Summary',
               style: Theme.of(context).textTheme.display1,
             ),
             actions: <Widget>[

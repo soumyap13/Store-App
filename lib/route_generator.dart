@@ -15,6 +15,7 @@ import 'src/screens/product.dart';
 import 'src/screens/signin.dart';
 import 'src/screens/signup.dart';
 import 'src/screens/tabs.dart';
+import 'src/screens/orderSummary.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -74,6 +75,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => HelpWidget());
       case '/Languages':
         return MaterialPageRoute(builder: (_) => LanguagesWidget());
+      case '/Order':
+        return MaterialPageRoute(builder: (_) => orderSummaryWidget());
 //      case '/second':
 //      // Validation of correct data type
 //        if (args is String) {
