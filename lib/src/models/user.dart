@@ -29,5 +29,9 @@ class User {
         '4600 Isaacs Creek Road Golden, IL 62339',
         UserState.available,
         "1234567890");
+
+  getDateOfBirth() {
+    return DateFormat('yyyy-MM-dd').format(this.dateOfBirth);
+
   }
 }

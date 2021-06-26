@@ -44,7 +44,7 @@ class _MessageItemWidgetState extends State<MessageItemWidget> {
       },
       child: InkWell(
         onTap: () {
-          Navigator.of(context).pushNamed('/Tabs', arguments: 5);
+          Navigator.of(context).pushNamed('/Chat');
         },
         child: Container(
           color: this.widget.message.read

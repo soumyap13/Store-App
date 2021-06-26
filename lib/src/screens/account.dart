@@ -75,7 +75,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                   child: FlatButton(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                     onPressed: () {
-                      Navigator.of(context).pushNamed('/Tabs', arguments: 4);
+                      Navigator.of(context).pushNamed('/Tabs', arguments: 1);
                     },
                     child: Column(
                       children: <Widget>[

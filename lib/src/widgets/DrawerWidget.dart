@@ -64,7 +64,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.of(context).pushNamed('/Orders', arguments: 0);
             },
             leading: Icon(
-              UiIcons.inbox,
+              UiIcons.shopping_cart,
               color: Theme.of(context).focusColor.withOpacity(1),
             ),
             title: Text(
@@ -84,7 +84,30 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-              Navigator.of(context).pushNamed('/Tabs', arguments: 4);
+              Navigator.of(context).pushNamed('/Orders', arguments: 0);
+            },
+            leading: Icon(
+              UiIcons.inbox,
+              color: Theme.of(context).focusColor.withOpacity(1),
+            ),
+            title: Text(
+              "Group Orders",
+              style: Theme.of(context).textTheme.subhead,
+            ),
+            trailing: Chip(
+              padding: EdgeInsets.symmetric(horizontal: 5),
+              backgroundColor: Colors.transparent,
+              shape: StadiumBorder(
+                  side: BorderSide(color: Theme.of(context).focusColor)),
+              label: Text(
+                '8',
+                style: TextStyle(color: Theme.of(context).focusColor),
+              ),
+            ),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.of(context).pushNamed('/Tabs', arguments: 1);
             },
             leading: Icon(
               UiIcons.heart,
@@ -184,7 +207,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             onTap: () {
-              Navigator.of(context).pushNamed('/Tabs', arguments: 1);
+              Navigator.of(context).pushNamed('/Tabs', arguments: 4);
             },
             leading: Icon(
               UiIcons.settings_1,
