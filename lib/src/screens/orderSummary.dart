@@ -4,19 +4,12 @@ import '../widgets/ShoppingCartButtonWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-class orderSummaryWidget extends StatefulWidget {
-  // final String image;
-  const orderSummaryWidget({
-    Key key,
-
-    // @required this.image,
-  }) : super(key: key);
-
+class OrderSummaryWidget extends StatefulWidget {
   @override
-  _orderSummaryWidgetState createState() => _orderSummaryWidgetState();
+  _OrderSummaryWidgetState createState() => _OrderSummaryWidgetState();
 }
 
-class _orderSummaryWidgetState extends State<orderSummaryWidget> {
+class _OrderSummaryWidgetState extends State<OrderSummaryWidget> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -266,21 +259,20 @@ class _orderSummaryWidgetState extends State<orderSummaryWidget> {
                                                                 children: <
                                                                     Widget>[
                                                               Icon(Icons
-                                                                  .circle_outlined),
+                                                                  .check_circle),
                                                               Container(
                                                                   width: 2,
                                                                   height: 16,
                                                                   color: Colors
                                                                       .white),
-                                                              Icon(Icons
-                                                                  .circle_outlined),
+                                                              Icon(
+                                                                  Icons.circle),
                                                               Container(
                                                                   width: 2,
                                                                   height: 16,
                                                                   color: Colors
                                                                       .white),
-                                                              Icon(Icons
-                                                                  .circle_outlined)
+                                                              Icon(Icons.circle)
                                                             ])),
                                                         Expanded(
                                                             child: Column(
