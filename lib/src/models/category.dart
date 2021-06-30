@@ -8,8 +8,27 @@ class Category {
   bool selected;
   IconData icon;
   List<Product> products;
+  List<SubCategory> subCategories;
+  Category({this.name, this.icon, this.selected, this.products});
 
-  Category(this.name, this.icon, this.selected, this.products);
+  void fromJson(Map<String, dynamic> res) {
+    this.id = res['id'];
+    this.name = res['name'];
+    if (res['sub_categories'] != null) {
+      subCategories = [];
+      for (var x in res['sub_categories']) {
+        SubCategory subCategory = SubCategory();
+        subCategory.fromJson(x);
+        subCategories.add(subCategory);
+      }
+    }
+    if (res['products'] != null) {
+      products = [];
+      for (var x in res['products']) {
+        // Product product=Product(name, image, available, price, quantity, sales, rate, discount)
+      }
+    }
+  }
 }
 
 class SubCategory {
@@ -18,7 +37,11 @@ class SubCategory {
   bool selected;
   List<Product> products;
 
-  SubCategory(this.name, this.selected, this.products);
+  SubCategory({this.name, this.selected, this.products});
+  void fromJson(Map<String, dynamic> data) {
+    this.id = data['id'];
+    this.name = data['name'];
+  }
 }
 
 class CategoriesList {

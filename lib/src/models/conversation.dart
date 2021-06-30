@@ -18,105 +18,110 @@ class ConversationsList {
   ConversationsList() {
     this._conversations = [
       new Conversation(
-          user: new User.basic(
-              name: 'Kelly R. Hart',
-              avatar: 'img/user2.jpg',
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
               userState: UserState.available),
-          chats: [
+          [
             new Chat(
-                text: 'Supports overlappi',
-                time: '63min ago',
-                user: new User.basic(
-                    name: 'Kelly R. Hart',
-                    avatar: 'img/user2.jpg',
+                'Supports overlappi',
+                '63min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available)),
             new Chat(
-                text: 'Accepts one sliver as content.',
-                time: '15min ago',
-                user: _currentUser),
+                'Accepts one sliver as content.', '15min ago', _currentUser),
             new Chat(
-                text: 'Header can ov',
-                time: '16min ago',
-                user: new User.basic(
-                    name: 'Kelly R. Hart',
-                    avatar: 'img/user2.jpg',
+                'Header can ov',
+                '16min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available))
           ],
           read: false),
       new Conversation(
-          user: new User.basic(
-              name: 'Carol R. Hansen',
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
               avatar: 'img/user0.jpg',
-              userState: UserState.busy),
-          chats: [
-            new Chat(
-                text: 'Flutter project, add the following dependency ',
-                time: '32min ago',
-                user: new User.basic(
-                    name: 'Carol R. Hansen',
-                    avatar: 'img/user1.jpg',
-                    userState: UserState.available)),
-            new Chat(
-                text: 'Can scroll in any direction. ',
-                time: '42min ago',
-                user: _currentUser),
-            new Chat(
-                text: 'Notifies when the header scrolls outside the viewport. ',
-                time: '12min ago',
-                user: new User.basic(
-                    name: 'Carol R. Hansen',
-                    avatar: 'img/user1.jpg',
-                    userState: UserState.available))
-          ],
-          read: true),
-      new Conversation(
-          user: new User.basic(
-              name: 'Douglas M. Kirkpatrick',
-              avatar: 'img/user2.jpg',
-              userState: UserState.away),
-          chats: [
-            new Chat(
-                text: 'Accepts one sliver as content. ',
-                time: '1day ago',
-                user: new User.basic(
-                    name: 'Douglas M. Kirkpatrick',
-                    avatar: 'img/user1.jpg',
-                    userState: UserState.available)),
-            new Chat(text: 'Yes, Ok', time: '6min ago', user: _currentUser),
-            new Chat(
-                text:
-                    'Notifies when the header scrolls outside the viewport.  ',
-                time: '33min ago',
-                user: new User.basic(
-                    name: 'Douglas M. Kirkpatrick',
-                    avatar: 'img/user1.jpg',
-                    userState: UserState.available))
-          ],
-          read: true),
-      new Conversation(
-          user: new User.basic(
-              name: 'John R. Whipple',
-              avatar: 'img/user3.jpg',
               userState: UserState.available),
-          chats: [
+          [
             new Chat(
-                text: 'Can scroll in any direction. ',
-                time: '63min ago',
-                user: new User.basic(
-                    name: 'John R. Whipple',
-                    avatar: 'img/user1.jpg',
+                'Flutter project, add the following dependency ',
+                '32min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available)),
             new Chat(
-                text: 'Can scroll in any direction. ',
-                time: '1hour ago',
-                user: new User.basic(
-                    name: 'John R. Whipple',
-                    avatar: 'img/user1.jpg',
+                'Can scroll in any direction. ', '42min ago', _currentUser),
+            new Chat(
+                'Notifies when the header scrolls outside the viewport. ',
+                '12min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          read: true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Accepts one sliver as content. ',
+                '1day ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Yes, Ok', '6min ago', _currentUser),
+            new Chat(
+                'Notifies when the header scrolls outside the viewport.  ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          read: true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Can scroll in any direction. ',
+                '63min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available)),
             new Chat(
-                text: 'Supports overlapping (AppBars for example).',
-                time: '33min ago',
-                user: _currentUser)
+                'Can scroll in any direction. ',
+                '1hour ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example).', '33min ago',
+                _currentUser)
           ],
           read: true),
       new Conversation(
@@ -142,84 +147,456 @@ class ConversationsList {
                 user: new User.basic(
                     name: 'Jordan P. Jeffries',
                     avatar: 'img/user1.jpg',
-                    userState: UserState.available))
-          ],
-          read: false),
-      new Conversation(
-          user: new User.basic(
-              name: 'Michele J. Dunn',
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
               avatar: 'img/user0.jpg',
               userState: UserState.available),
-          chats: [
+          [
             new Chat(
-                text: 'Accepts one sliver as content.',
-                time: '45min ago',
-                user: new User.basic(
-                    name: 'Michele J. Dunn',
-                    avatar: 'img/user1.jpg',
+                'For help getting started with Flutter ',
+                '31min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example). ',
+                '31min ago', _currentUser),
             new Chat(
-                text: 'Supports overlapping (AppBars for example).',
-                time: '12min ago',
-                user: _currentUser),
-            new Chat(
-                text: 'Can scroll in any direction. ',
-                time: '31min ago',
-                user: new User.basic(
-                    name: 'Michele J. Dunn',
-                    avatar: 'img/user1.jpg',
+                'Accepts one sliver as content. ',
+                '43min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available))
           ],
           read: false),
       new Conversation(
-          user: new User.basic(
-              name: 'Regina R. Risner',
-              avatar: 'img/user1.jpg',
-              userState: UserState.away),
-          chats: [
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
             new Chat(
-                text: 'Can scroll in any direction.  ',
-                time: '33min ago',
-                user: new User.basic(
-                    name: 'Regina R. Risner',
-                    avatar: 'img/user1.jpg',
+                'Accepts one sliver as content.',
+                '45min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example).', '12min ago',
+                _currentUser),
+            new Chat(
+                'Can scroll in any direction. ',
+                '31min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          read: false),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Can scroll in any direction.  ',
+                '33min ago',
+                User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example). ',
+                '33min ago', _currentUser),
+            new Chat(
+                'Accepts one sliver as content. ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Supports overlapping AppBars for example. ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available)),
             new Chat(
-                text: 'Supports overlapping (AppBars for example). ',
-                time: '33min ago',
-                user: _currentUser),
+                'Can scroll in any direction.  ', '33min ago', _currentUser),
             new Chat(
-                text: 'Accepts one sliver as content. ',
-                time: '33min ago',
-                user: new User.basic(
-                    name: 'Regina R. Risner',
-                    avatar: 'img/user1.jpg',
+                'For help getting started with Flutter ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          false),
+    ];
+  }
+
+  List<Conversation> get conversations => _conversations;
+}
+
+class GroupConversationsList extends ConversationsList {
+  List<Conversation> _conversations;
+  User _currentUser = new User.init().getCurrentUser();
+
+  GroupConversationsList() {
+    this._conversations = [
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Supports overlappi',
+                '63min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat(
+                'Accepts one sliver as content.', '15min ago', _currentUser),
+            new Chat(
+                'Header can ov',
+                '16min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          false),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Flutter project, add the following dependency ',
+                '32min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat(
+                'Can scroll in any direction. ', '42min ago', _currentUser),
+            new Chat(
+                'Notifies when the header scrolls outside the viewport. ',
+                '12min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Accepts one sliver as content. ',
+                '1day ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Yes, Ok', '6min ago', _currentUser),
+            new Chat(
+                'Notifies when the header scrolls outside the viewport.  ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'For help getting started with Flutter ',
+                '31min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example). ',
+                '31min ago', _currentUser),
+            new Chat(
+                'Accepts one sliver as content. ',
+                '43min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          false),
+    ];
+  }
+
+  List<Conversation> get conversations => _conversations;
+}
+
+class PeopleNearbyConversationsList extends ConversationsList {
+  List<Conversation> _conversations;
+  User _currentUser = new User.init().getCurrentUser();
+
+  PeopleNearbyConversationsList() {
+    this._conversations = [
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Supports overlappi',
+                '63min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat(
+                'Accepts one sliver as content.', '15min ago', _currentUser),
+            new Chat(
+                'Header can ov',
+                '16min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          false),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Flutter project, add the following dependency ',
+                '32min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat(
+                'Can scroll in any direction. ', '42min ago', _currentUser),
+            new Chat(
+                'Notifies when the header scrolls outside the viewport. ',
+                '12min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Accepts one sliver as content. ',
+                '1day ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Yes, Ok', '6min ago', _currentUser),
+            new Chat(
+                'Notifies when the header scrolls outside the viewport.  ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Can scroll in any direction. ',
+                '63min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat(
+                'Can scroll in any direction. ',
+                '1hour ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example).', '33min ago',
+                _currentUser)
+          ],
+          true),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'For help getting started with Flutter ',
+                '31min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example). ',
+                '31min ago', _currentUser),
+            new Chat(
+                'Accepts one sliver as content. ',
+                '43min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          false),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Accepts one sliver as content.',
+                '45min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example).', '12min ago',
+                _currentUser),
+            new Chat(
+                'Can scroll in any direction. ',
+                '31min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available))
+          ],
+          false),
+      new Conversation(
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
+              avatar: 'img/user0.jpg',
+              userState: UserState.available),
+          [
+            new Chat(
+                'Can scroll in any direction.  ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
+                    userState: UserState.available)),
+            new Chat('Supports overlapping (AppBars for example). ',
+                '33min ago', _currentUser),
+            new Chat(
+                'Accepts one sliver as content. ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available))
           ],
           read: true),
       new Conversation(
-          user: new User.basic(
-              name: 'Patrick B. Scott',
+          new User.basic(
+              firstName: 'Maria',
+              lastName: 'R. Garza',
               avatar: 'img/user0.jpg',
-              userState: UserState.busy),
-          chats: [
+              userState: UserState.available),
+          [
             new Chat(
-                text: 'Supports overlapping AppBars for example. ',
-                time: '33min ago',
-                user: new User.basic(
-                    name: 'Patrick B. Scott',
-                    avatar: 'img/user1.jpg',
+                'Supports overlapping AppBars for example. ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available)),
             new Chat(
-                text: 'Can scroll in any direction.  ',
-                time: '33min ago',
-                user: _currentUser),
+                'Can scroll in any direction.  ', '33min ago', _currentUser),
             new Chat(
-                text: 'For help getting started with Flutter ',
-                time: '33min ago',
-                user: new User.basic(
-                    name: 'Patrick B. Scott',
-                    avatar: 'img/user1.jpg',
+                'For help getting started with Flutter ',
+                '33min ago',
+                new User.basic(
+                    firstName: 'Maria',
+                    lastName: 'R. Garza',
+                    avatar: 'img/user0.jpg',
                     userState: UserState.available))
           ],
           read: false),
